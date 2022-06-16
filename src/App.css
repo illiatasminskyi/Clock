@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.App img {
+  width: 272px;
+  height: 344px;
+  pointer-events: none;
+  position: relative;
+  z-index: 4;
+}
+
+.ClockAndTable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Clock {
+  height: 170px;
+  width: 392px;
+  border: 10px solid #000000;
+  border-radius: 20px;
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s;
+}
+
+.Clock .time {
+  font-family: 'Barlow','Montserrat',  sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 95px;
+  transition: all .5s;
+}
+
+.Table {
+  height: 255px;
+  width: 1164px;
+  border-radius: 50% 50% 0px 0px / 255px 255px 0px 0px;
+  position: relative;
+  z-index: 3;
+  transition: all .4s;
+}
+
+.button {
+  position: absolute;
+  right: 25%;
+  z-index: 5;
+  width: 10px;
+  height: 40%;
+  padding: 0 15px 15px 15px;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.button:hover {
+    height: 42%;
+}
+
+.button_block {
+  width: 10px;
+  height: 100%;
+  background-color: #000000;
+  border-radius: 0 0 25px 25px;
+
+}
+
+.light {
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  bottom: 0;
+  width:0;
+  height:0;
+  border-left: 900px solid transparent;
+  border-right: 900px solid transparent;
+  border-top:0;
+  transition: all .4s;
+} 
+
+@media (max-width: 900px) {
+  .button_block {
+    right: 15%;
+  }
+} 
+
+@media (max-width: 700px) {
+  .Clock {
+    height: 130px;
+    width: 322px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    margin-bottom: -60px;
+  }
+  .Clock .time {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 500px) {
+  .App img {
+    width: 222px;
+    height: 294px;
+  }
+  .Clock {
+    height: 100px;
+    width: 272px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    margin-bottom: -60px;
+  }
+  .Clock .time {  
+    font-size: 65px;
+  }
+  .button_block {
+    width: 8px;
+    height: 30%;
+    background-color: #000000;
+    position: absolute;
+    right: 10%;
+    border-radius: 0 0 25px 25px;
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+@media (max-height: 721px) {
+  .Table {  
+    height: 140px;
+    /* 100 */
+    width: 1164px;
+    
+    /* none */
+    border-radius: 50% 50% 0px 0px / 255px 255px 0px 0px;
+    position: relative;
+    z-index: 3;
+  }
+  .light {
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    bottom: 0;
+    width:0;
+    height:0;
+    border-left: 600px solid transparent;
+    border-right: 600px solid transparent;
+    border-top:0;
+  } 
+} 
+
+@media (max-height: 651px) {
+  .Clock {
+    height: 100px;
+    width: 272px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    margin-bottom: -60px;
+  }
+  .Clock .time {  
+    font-size: 65px;
+  }
+  .Table {  
+    height: 140px;
+    width: 564px;
+  }
+} 
